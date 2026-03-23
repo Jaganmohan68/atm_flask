@@ -23,7 +23,7 @@ def reg():
             else:
                 return redirect(url_for("login"))
         else: 
-            return f"user name already existed"
+            return "user name already existed"
     return render_template("reg.html")
 
 @app.route("/login",methods=["GET","POST"])
