@@ -19,9 +19,8 @@ def reg():
             users[username]={"email":useremail,"password":userpassword,"pin":userpin,"Amount":0}
             if username not in statements:
                 statements[username]={"deposit_statements":[],"withdraw_statements":[]}
-                print(statements[username])
-            else:
-                return redirect(url_for("login"))
+                # print(statements[username])
+            return redirect(url_for("login"))
         else: 
             return "user name already existed"
     return render_template("reg.html")
