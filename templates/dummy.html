@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jinja_syntax</title>
+</head>
+<body>
+    <center>Jinja Syntax</center>
+    {#
+    <!-- var declaration -->
+    <p>Your age is : {{age}}</p>
+    
+    
+     {% if age >= 18 %}
+     <p>Your eligible</p>
+     {% else %}
+     <p>Not eligible</p>
+
+     {% endif %}
+    #}
+
+    
+    {#
+    <!-- var declaration -->
+    <p>Your age is : {{age}}</p>
+    
+    <!-- if and else conditions -->
+     {% if age >= 18 %}
+
+        {% if age%2==0 %}
+        <p>Your eligible with extra coupen</p>
+        {% else %}
+        <p>Your eligible</p>
+        {% endif %}
+
+     {% else %}
+     <p>Not eligible</p>
+
+     {% endif %} 
+    #}
+
+     <!-- using elif -->
+{#
+    <p>Your age is : {{age}}</p>
+
+    {% if age>=18 %}
+    <p>Your eligible</p>
+    {% elif age%2==0 %}
+    <p>Your eligible with extra coupen</p>
+    {% else %}
+    <p>Your Not Eligible</p>
+
+    {% endif %}
+
+#}
+    <!-- using for loop -->
+     {% for i in users %}
+     <p>name: {{i}} - salary: {{users[i]["Amount"]}}</p>
+    {% endfor %}
+</body>
+</html>
