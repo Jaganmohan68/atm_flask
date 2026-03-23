@@ -1,6 +1,6 @@
 from flask import Flask,request,redirect,url_for,render_template,make_response
 from datetime import datetime
-app=Flask(__name__)
+app=Flask(__name__,template_folder="templates")
 users={}
 statements={}
 @app.route("/")
@@ -133,6 +133,7 @@ def userlogout():
         return redirect(url_for("login"))
 
 if __name__=="__main__":
-    app.run(use_reloader=True,debug=True) 
+    app.run() 
+app=app
     
     
